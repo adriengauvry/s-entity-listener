@@ -1,0 +1,19 @@
+{
+    "name": "adgauvry/s-entity-listener",
+    "description": "Permet l'horodatage sur des entit\u0000s Symfony",
+    "authors": [
+        {
+            "name": "Adrien Gauvry",
+            "email": "agauvry@comcentre.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "ChangeListener": "src/"
+        }
+    }
+}
