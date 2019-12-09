@@ -16,7 +16,7 @@ Il faut ajouter dans services.yaml :
             - "@=service('security.token_storage').getToken().getUser()"
 ```
 
-Il faut également avoir une entité "Utilisateur" qui doit comporter un champ "email" et une entité "Horodatage" qui doit comporter une jointure ManyToOne avec "Utilisateur" et les champs "nomEntite", "idEntite", "date", "action" et leur getter/setter correspondant.
+Il faut également avoir une entité **Utilisateur** qui doit comporter un champ *email* et une entité *Horodatage* qui doit comporter une jointure ManyToOne avec **Utilisateur** et les champs *nomEntite*, *idEntite*, *date*, *action* et leur getter/setter correspondant.
 <details><summary>Voir un exemple d'entité Horodatage</summary>
 <p>
 
@@ -134,7 +134,9 @@ class Horodatage
 </details>
 
 ## Usage
-Pour pouvoir utiliser l'horodatage, il faut faire hériter une classe par EntityChangeListener. Il faut ensuite implémeter la méthode onFlush.
+Pour pouvoir utiliser l'horodatage, il faut faire hériter une classe par **EntityChangeListener**. Il faut ensuite implémeter la méthode *onFlush*. 
+
+Pour chaque entité qu'on souhaite surveiller les modifications, on appelle la méthode héritée de **EntityChangeListener** *horodatage* avec en 1ère argument l'entité, en 2ème le nom de l'entité et en 3ème les arguments passés dans le *OnFlush*.
 
 ```php
 class MaClasseHorodatage extends EntityChangeListener  
