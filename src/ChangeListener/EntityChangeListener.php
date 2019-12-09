@@ -1,10 +1,9 @@
 <?php
 
 
-namespace App\Service;
+namespace ChangeListener;
 
 use App\Entity\Horodatage;
-use ChangeListener\QueryEntity;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 
 abstract class EntityChangeListener
