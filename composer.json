@@ -1,12 +1,13 @@
 {
     "name": "adgauvry/s-entity-listener",
-    "description": "Permet l'horodatage sur des entit\u0000s Symfony",
+    "description": "Permet l'horodatage sur des entites Symfony",
     "authors": [
         {
             "name": "Adrien Gauvry",
             "email": "agauvry@comcentre.com"
         }
     ],
+    "license": "MIT",
     "require": {
         "php": ">=5.3.0"
     },
