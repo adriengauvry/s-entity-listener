@@ -21,7 +21,7 @@ abstract class EntityChangeListener
 
     protected function horadatage($classe, $nomClasse, $args)
     {
-        if($user != null) {
+        if($this->user != null) {
             $em = $args->getEntityManager();
             $uow = $em->getUnitOfWork();
 
