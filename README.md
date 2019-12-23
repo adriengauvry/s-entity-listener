@@ -13,7 +13,7 @@ Il faut ajouter dans services.yaml :
         tags:
             - { name: doctrine.event_listener, event: onFlush }
         arguments:
-            - "@=service('security.token_storage').getToken().getUser()"
+           - "@=service('security.token_storage').getToken() != null ? service('security.token_storage' .getToken().getUser() : null"
 ```
 
 Il faut également avoir une entité **Utilisateur** qui doit comporter un champ *email* et une entité *Horodatage* qui doit comporter une jointure ManyToOne avec **Utilisateur** et les champs *nomEntite*, *idEntite*, *date*, *action* et leur getter/setter correspondant.
